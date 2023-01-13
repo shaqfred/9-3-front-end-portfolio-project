@@ -1,8 +1,9 @@
 const URL_PAGE =("https://type.fit/api/quotes")
 fetch("https://type.fit/api/quotes")
 fetch(URL_PAGE)
-.then(response =>response.json())
-.then(data => console.log(data));
+.then(res =>res.json())
+.then(resJson => console.log(resJson));
+
 
 
 
@@ -10,15 +11,15 @@ const form = document.querySelector('form');
 
 const quoteList = document.querySelector("main.centered");
 
-let quote = document.querySelector('ul');
-quoteList.addEventListener("click",
+let quotesList = document.querySelector('ul');
+quotesList.addEventListener("click",
 function(ev){
-    if(ev.target.quoteList === 'LI'){
+    if(ev.target.quotesList === 'LI'){
         ev.target.classList.toggle('checked');
     }
 })
 
-const updatePage = (quoteList) => {
+const updatePage = (quote) => {
 
     let article = document.createElement("article");
     article.classList.add("card");
@@ -28,21 +29,33 @@ const updatePage = (quoteList) => {
     article.append(quoteGenre);
 
     let quoteText = document.createElement("p");
-    quote.textContent = `${quote.quoteText}`;
+    quoteText.textContent = `${quote.quoteText}`;
     article.append(quoteText);
 
     let showAnswerButton = document.createElement("button");
+    showAnswerButton.textContent =`{quote.quoteAuthor}`
     showAnswerButton.textContent =`reveal answer`;
     article.append(showAnswerButton);
+    
+    let hiddenAnswer =document.createElement("p");
+    hiddenAnswer.classList.add("hidden");
+    hiddenAnswer.textContent =`${quote.quoteAuthor}`;
+    article.append(hiddenAnswer)
 
-    quote.append(article);
+    quoteList.append(article);
 
+    quoteText.addEventListener("click",(event)=>{
+        event.target.classList.toggle("hidden")
+    
     showAnswerButton.addEventListener("click", (event)=>{
-        let hiddenAnswer = document.createElement("p");
+       let hiddenAnswer =document.createElement("p");
+       
+       hiddenAnswer.textContent =`${quote.quoteAuthor}`;
+       article.append(hiddenAnswer);
 
-        hiddenAnswer.textContent = `${quote.quoteAuthor}`;
-        article.append(hiddenAnswer);
+    }) 
     });
+   
 
 };
 const showError = (error) =>{
@@ -59,7 +72,7 @@ form.addEventListener("submit", (event)=> {
     .then((result)=> result.json())
     .then((json)=> {
         console.log(json)
-      updatePage((obj) => updatePage(obj));
+        json.forEach((obj)=> updatePage(obj));
     })
     .catch(showError);
-})
+});

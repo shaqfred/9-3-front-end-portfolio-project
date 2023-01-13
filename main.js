@@ -24,38 +24,36 @@ const updatePage = (quote) => {
     let article = document.createElement("article");
     article.classList.add("card");
     
-    let quoteGenre =document.createElement("h2");
-    quoteGenre.textContent = `${quote.quoteGenre}`;
-    article.append(quoteGenre);
+//     let quoteGenre =document.createElement("h2");
+//     quoteGenre.textContent = `${quote.quoteGenre}`;
+//     article.append(quoteGenre);
+// console.log(quote)
 
     let quoteText = document.createElement("p");
-    quoteText.textContent = `${quote.quoteText}`;
+    quoteText.textContent = `${quote.text}`;
     article.append(quoteText);
 
     let showAnswerButton = document.createElement("button");
-    showAnswerButton.textContent =`{quote.quoteAuthor}`
+    
     showAnswerButton.textContent =`reveal answer`;
     article.append(showAnswerButton);
     
-    let hiddenAnswer =document.createElement("p");
-    hiddenAnswer.classList.add("hidden");
-    hiddenAnswer.textContent =`${quote.quoteAuthor}`;
-    article.append(hiddenAnswer)
+   
 
     quoteList.append(article);
 
     quoteText.addEventListener("click",(event)=>{
         event.target.classList.toggle("hidden")
     
-    showAnswerButton.addEventListener("click", (event)=>{
-       let hiddenAnswer =document.createElement("p");
-       
-       hiddenAnswer.textContent =`${quote.quoteAuthor}`;
-       article.append(hiddenAnswer);
-
-    }) 
-    });
    
+    });
+    showAnswerButton.addEventListener("click", (event)=>{
+        let hiddenAnswer =document.createElement("p");
+        
+        hiddenAnswer.textContent =`${quote.author}`;
+        article.append(hiddenAnswer);
+ 
+     }) 
 
 };
 const showError = (error) =>{

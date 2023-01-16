@@ -6,6 +6,7 @@ background-color: palevioletred;
 font-family:fantasy;
 margin: auto;
 padding: 0;
+text-align: center;
 }
 
 h1,
@@ -17,4 +18,53 @@ h6 {
     font-family: fantasy;
     font-weight: bolder;
     margin: auto;
+}
+header {
+    background: #5c8994;
+    border-bottom: 3px solid #4f677d;
+    color: #a736d4;
+    font-size: larger;
+    font-family: fantasy;
+    text-align: center;
+
+}
+header h1 {
+    padding: 25px;
+}
+header h1 span {
+    font-family: fantasy;
+    font-size: 75%;
+    scroll-margin-right: 15px;
+}
+
+.centered {
+    display:grid;
+    gap:15px;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 25px auto;
+    width: 75%;
+}
+button {
+    border: 2px solid #945c86;
+    border-radius: 5px;
+    background: #4f7d5d;
+    color: #090909;
+    cursor: pointer;
+    font-weight: bold;
+    padding: 10px;
+}
+button:hover {
+    border: 2px solid #682a98;
+    background: #625c94;
+}
+input.button:hover {
+    background-color: red;
+}
+.card {
+    border: 3px solid #4f7d5d;
+    padding: 25px;
+}
+.hidden {
+    text-decoration-color:  rgb(67, 66, 66);
+    visibility: hidden;
 }

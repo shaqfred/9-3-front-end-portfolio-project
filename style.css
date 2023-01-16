@@ -1,0 +1,20 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;700&display=swap");
+html,
+body{
+color:rgb(8, 8, 133);
+background-color: palevioletred;
+font-family:fantasy;
+margin: auto;
+padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: fantasy;
+    font-weight: bolder;
+    margin: auto;
+}

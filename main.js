@@ -35,7 +35,7 @@ const updatePage = (quote) => {
 
     let showAnswerButton = document.createElement("button");
     
-    showAnswerButton.textContent =`reveal answer`;
+    showAnswerButton.textContent =`Reveal Answer`;
     article.append(showAnswerButton);
     
    

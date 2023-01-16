@@ -3,11 +3,14 @@ html,
 body{
 color:rgb(8, 8, 133);
 background-color: palevioletred;
-font-family:fantasy;
+font-family:rubik;
+font-weight: bold;
 margin: auto;
-padding: 0;
+padding: 2px 6px;
 text-align: center;
+font-size: x-large;
 }
+
 
 h1,
 h2,
@@ -21,19 +24,27 @@ h6 {
 }
 header {
     background: #5c8994;
-    border-bottom: 3px solid #4f677d;
+    border-bottom: 4px solid #4f677d;
+    border-top: 4px solid #4f677d;
     color: #a736d4;
-    font-size: larger;
+    font-size: x-large;
     font-family: fantasy;
     text-align: center;
+    text-shadow:blueviolet;
 
 }
+
+
+
+
 header h1 {
-    padding: 25px;
+    padding: 45px;
+    
 }
+
 header h1 span {
     font-family: fantasy;
-    font-size: 75%;
+    font-size: 100%;
     scroll-margin-right: 15px;
 }
 
@@ -51,15 +62,16 @@ button {
     color: #090909;
     cursor: pointer;
     font-weight: bold;
-    padding: 10px;
+    font-size: medium;
+    padding: 25px;
 }
 button:hover {
     border: 2px solid #682a98;
     background: #625c94;
 }
-input.button:hover {
-    background-color: red;
-}
+ input.button:hover {
+    background-color:grey;
+} */
 .card {
     border: 3px solid #4f7d5d;
     padding: 25px;

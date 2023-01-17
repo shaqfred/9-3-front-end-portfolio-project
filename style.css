@@ -6,12 +6,11 @@ background-color: palevioletred;
 font-family:rubik;
 font-weight: bold;
 margin: auto;
-padding: 2px 6px;
+padding: 3px 6px;
 text-align: center;
-font-size: x-large;
+font-size: 125%;
+
 }
-
-
 h1,
 h2,
 h3,
@@ -22,6 +21,12 @@ h6 {
     font-weight: bolder;
     margin: auto;
 }
+img{
+    height: 25%;
+    width: 30%;
+    max-width: 50%;
+    
+}
 header {
     background: #5c8994;
     border-bottom: 4px solid #4f677d;
@@ -31,14 +36,13 @@ header {
     font-family: fantasy;
     text-align: center;
     text-shadow:blueviolet;
+    
 
 }
 
-
-
-
 header h1 {
-    padding: 45px;
+    padding: 40px;
+   
     
 }
 
@@ -71,7 +75,10 @@ button:hover {
 }
  input.button:hover {
     background-color:grey;
-} */
+    height: 60%;
+    width:40% ;
+    
+} 
 .card {
     border: 3px solid #4f7d5d;
     padding: 25px;

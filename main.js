@@ -23,11 +23,7 @@ const updatePage = (quote) => {
 
     let article = document.createElement("article");
     article.classList.add("card");
-    
-//     let quoteGenre =document.createElement("h2");
-//     quoteGenre.textContent = `${quote.quoteGenre}`;
-//     article.append(quoteGenre);
-// console.log(quote)
+        
 
     let quoteText = document.createElement("p");
     quoteText.textContent = `${quote.text}`;

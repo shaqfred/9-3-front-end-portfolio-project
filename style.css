@@ -8,7 +8,7 @@ font-weight: bold;
 margin: auto;
 padding: 3px 6px;
 text-align: center;
-font-size: 125%;
+font-size: larger;
 
 }
 h1,
@@ -32,18 +32,22 @@ header {
     border-bottom: 4px solid #4f677d;
     border-top: 4px solid #4f677d;
     color: #a736d4;
-    font-size: x-large;
+    font-size: 150%;
     font-family: fantasy;
     text-align: center;
     text-shadow:blueviolet;
-    
 
 }
-
-header h1 {
-    padding: 40px;
-   
-    
+header input {
+    padding: 1%;
+    font-size: x-large;
+    background-color:rgb(29, 29, 246);
+    border-radius: 5px;
+}
+header input:hover {
+    border: 2px solid #682a98;
+    background: #625c94;
+    border-radius: 5px;
 }
 
 header h1 span {
@@ -66,8 +70,8 @@ button {
     color: #090909;
     cursor: pointer;
     font-weight: bold;
-    font-size: medium;
-    padding: 25px;
+    font-size: 100%;
+    padding: 15px;
 }
 button:hover {
     border: 2px solid #682a98;
@@ -82,6 +86,7 @@ button:hover {
 .card {
     border: 3px solid #4f7d5d;
     padding: 25px;
+    border-radius: 5px;
 }
 .hidden {
     text-decoration-color:  rgb(67, 66, 66);

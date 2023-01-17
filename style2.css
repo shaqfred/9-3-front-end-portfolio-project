@@ -3,9 +3,16 @@
 body {
     background-color: aquamarine;
     text-align: center;
-    font-family: fantasy;
+    font-family:fantasy;
     text-decoration: underline;
     text-decoration-color: blue;
-    font-size: large;
+    font-size: x-large;
+    font-weight: bolder;
+    min-width: fit-content;
 
+}
+img {
+    height: 60%;
+    width: 105%;
+    max-width: 105%;
 }
